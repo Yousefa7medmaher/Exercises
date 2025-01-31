@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Blog Preview Card</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(238, 217, 30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: white;
+      width: 100%;
+      max-width: 350px;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid black;
+      box-shadow: 3px 4px 1px black;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .btn {
+      background-color: rgb(235, 216, 48);
+      border: none;
+      padding: 5px 10px;
+      font-weight: 600;
+      width: max-content;
+      border-radius: 4px;
+      transition: background-color 0.5s;
+      cursor: pointer;
+      justify-content: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .btn:hover {
+      background-color: rgba(235, 216, 48, 0.699);
+    }
+
+    .card img.bg {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    .p1 {
+      color: rgba(0, 0, 0, 0.884);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .p2 {
+      font-size: 14px;
+      margin: 10px 0;
+      color: rgba(0, 0, 0, 0.596);
+    }
+
+    h3 {
+      font-size: 18px;
+      margin: 10px 0;
+      transition: 0.5s;
+    }
+
+    h3:hover {
+      color: rgb(238, 217, 30);
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .icon img {
+      width: 35px;
+      border-radius: 50%;
+    }
+
+    .icon p {
+      margin-left: 10px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        max-width: 400px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .p2 {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <img class="bg" src="./illustration-article.svg" alt="Article Illustration">
+    <button class="btn">Learning</button>
+    <p class="p1">Published 21 Dec 2023</p>
+    <h3>HTML & CSS Foundations</h3>
+    <p class="p2">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <div class="icon">
+      <img src="./image-avatar.webp" alt="Author Avatar">
+      <p>Greg Hooper</p>
+    </div>
+  </div>
+</body>
+
+</html>
