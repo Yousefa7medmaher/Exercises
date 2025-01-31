@@ -3,131 +3,117 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <title>Frontend Mentor | Blog Preview Card</title>
 
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
+  <style> 
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: rgb(238, 217, 30);
+      background-color: rgb(244, 208, 78); /* Yellow background */
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      margin: 0;
-      padding: 20px;
     }
 
     .card {
+      border-radius: 20px;
+      color: black;
+      width: 338px;
       background-color: white;
+      padding: 24px;
+      outline: 1px solid black;
+      box-shadow: 6px 6px 0px black;
+    }
+
+    @media (max-width: 429px) {
+      .card {
+        width: 279px;
+      }
+    }
+
+    .bg {
       width: 100%;
-      max-width: 350px;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid black;
-      box-shadow: 3px 4px 1px black;
-      display: flex;
-      flex-direction: column;
+      border-radius: 10px;
+      margin-bottom: 24px;
     }
 
-    .btn {
-      background-color: rgb(235, 216, 48);
-      border: none;
-      padding: 5px 10px;
-      font-weight: 600;
-      width: max-content;
-      border-radius: 4px;
-      transition: background-color 0.5s;
-      cursor: pointer;
-      justify-content: flex-start;
-      margin-bottom: 16px;
-    }
-
-    .btn:hover {
-      background-color: rgba(235, 216, 48, 0.699);
-    }
-
-    .card img.bg {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 8px;
-      margin-bottom: 16px;
-    }
-
-    .p1 {
-      color: rgba(0, 0, 0, 0.884);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .p2 {
-      font-size: 14px;
-      margin: 10px 0;
-      color: rgba(0, 0, 0, 0.596);
-    }
-
+    p,
     h3 {
-      font-size: 18px;
-      margin: 10px 0;
-      transition: 0.5s;
+      line-height: 150%;
     }
 
-    h3:hover {
-      color: rgb(238, 217, 30);
+    .blog-category,
+    .blog-date,
+    .blog-title,
+    .blog-author {
+      color: rgb(17, 17, 17);
+    }
+
+    .blog-category,
+    .blog-title,
+    .blog-author {
+      font-family: "figtree-extra-bold", sans-serif;
+    }
+
+    .blog-category,
+    .blog-author {
+      font-size: 0.875rem;
+    }
+
+    .blog-category {
+      background: rgb(244, 208, 78); /* Yellow category button */
+      padding: 0.167em 0.5em;
+      width: fit-content;
+      border-radius: 4px;
+      margin: 0;
+      border: none;
+      padding: 6px 6px ;
+    }
+
+    .blog-date {
+      font-family: "figtree-medium", sans-serif;
+      font-size: 0.875rem;
+    }
+
+    .blog-title {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .blog-details {
+      font-family: "figtree-medium", sans-serif;
+      color: rgb(107, 107, 107);
+      margin-bottom: 24px;
     }
 
     .icon {
       display: flex;
       align-items: center;
-      margin-top: 10px;
-      width: 100%;
     }
 
-    .icon img {
-      width: 35px;
+    .img-author {
+      padding-right: 0.75rem;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
     }
 
-    .icon p {
-      margin-left: 10px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    @media (min-width: 768px) {
-      .card {
-        max-width: 400px;
-      }
-
-      h3 {
-        font-size: 20px;
-      }
-
-      .p2 {
-        font-size: 16px;
-      }
-    }
   </style>
 </head>
 
 <body>
   <div class="card">
     <img class="bg" src="./illustration-article.svg" alt="Article Illustration">
-    <button class="btn">Learning</button>
-    <p class="p1">Published 21 Dec 2023</p>
-    <h3>HTML & CSS Foundations</h3>
-    <p class="p2">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+    <button class="blog-category">Learning</button>
+    <p class="blog-date">Published 21 Dec 2023</p>
+    <h3 class="blog-title">HTML & CSS Foundations</h3>
+    <p class="blog-details">These languages are the backbone of every website, defining structure, content, and presentation.</p>
     <div class="icon">
-      <img src="./image-avatar.webp" alt="Author Avatar">
-      <p>Greg Hooper</p>
+      <img class="img-author" src="./image-avatar.webp" alt="Author Avatar">
+      <p class="blog-author">Greg Hooper</p>
     </div>
   </div>
 </body>
