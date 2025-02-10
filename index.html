@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Frontend Mentor | Social Links Profile</title>
+
+  <style>
+    /* General Styles */
+    body { 
+      background: linear-gradient(to bottom, #1c222c, #252c387c);
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    /* Card Container */
+    .container { 
+      border: 1px solid   #1c222c;
+      width: 300px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 4px  4px 10px #1c222c;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .container:hover {
+      transform: scale(1.05);
+    }
+
+    /* Profile Image */
+    .personal-img img {
+      width: 100px;
+      border-radius: 50%;
+      border: 3px solid #1c222cd3;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .personal-img img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* Text Styles */
+    .text h2 {
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+
+    .text p { 
+      color: rgba(250, 192, 0, 0.938);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* Buttons */
+    .btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    button { 
+      background: linear-gradient(to right, #1c222caf, #1c222c);
+      border: none;
+      width: 80%;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 3px 8px #1a2841;
+    }
+
+    button:hover {
+      background: linear-gradient(to right,#1c222c9c, #0e192c60);
+      transform: translateX(-3px);
+      box-shadow: 0 5px 15px #1c222c;
+    }
+
+    .attribution { 
+      font-size: 11px;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .attribution a { 
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="personal-img">
+      <img src="./assets/images/meimg.png" alt="Profile Image">
+    </div>
+    <div class="text">
+      <h2>Joo Ahmed Maher</h2>
+      <p>MERN Stack Student</p>
+    </div>
+    <div class="btns">
+      <button onclick="window.open('https://github.com/Yousefa7medmaher', '_blank')">GitHub</button>
+      <button onclick="window.open('https://www.frontendmentor.io/', '_blank')">Frontend Mentor</button>
+      <button onclick="window.open('https://www.instagram.com/', '_blank')">Instagram</button>
+      <button onclick="window.open('https://www.linkedin.com/in/yousef-ahmed-maher-272275279/', '_blank')">LinkedIn</button>
+      <button onclick="window.open('https://www.reddit.com/user/Live-Sky8448/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button', '_blank')">Reddit</button>
+      
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Joo Ahmed Maher</a>.
+    </div>
+  </div>
+
+</body>
+</html>
